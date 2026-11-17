@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: cache-proposal-no-kiku
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  proposal.md にメモの内容（p95 1.2秒と目標300ms、在庫集計クエリが原因、1分古くてよい、Redisに60秒キャッシュ、注文確定時にキー削除）が入っている。
+  メモにない数値や効果の見積もりを足していない。「効く」系の比喩、順序のない「まず、」、scan.mjs の要修正がない。

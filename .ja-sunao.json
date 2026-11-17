@@ -1,0 +1,3 @@
+{
+  "exclude": ["skills/ja-sunao/references/**", "skills/ja-sunao/evals/**"]
+}
