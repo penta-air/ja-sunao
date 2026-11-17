@@ -1,0 +1,13 @@
+{
+  "name": "ja-sunao",
+  "owner": {
+    "name": "Penta"
+  },
+  "plugins": [
+    {
+      "name": "ja-sunao",
+      "source": ".",
+      "description": "AIが書いた日本語に出やすい言い回しと構成を抑え、素直な日本語で書かせるプラグイン"
+    }
+  ]
+}

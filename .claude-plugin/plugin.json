@@ -1,0 +1,12 @@
+{
+  "name": "ja-sunao",
+  "description": "AIが書いた日本語に出やすい言い回しと構成を抑え、素直な日本語で書かせるプラグイン",
+  "version": "1.0.0",
+  "author": {
+    "name": "Penta"
+  },
+  "homepage": "https://github.com/penta-air/ja-sunao",
+  "repository": "https://github.com/penta-air/ja-sunao",
+  "license": "MIT",
+  "keywords": ["japanese", "writing", "humanize", "日本語"]
+}
