@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: diagnose-readme-without-rewrite
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  README.md は書き換えられていない。応答で、AIっぽく見える箇所を具体的に挙げている。
+  少なくとも「**ラベル**:」型の箇条書き、全角ダッシュ、「いかがでしたか」などの定型の締め、見出しの絵文字に触れ、それぞれなぜAIっぽく見えるかと直す方向を説明している。

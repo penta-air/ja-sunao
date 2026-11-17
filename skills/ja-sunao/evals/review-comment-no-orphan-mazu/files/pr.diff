@@ -1,0 +1,29 @@
+diff --git a/src/order/OrderService.ts b/src/order/OrderService.ts
+@@ -12,20 +12,31 @@ export class OrderService {
+-  async confirm(orderId: string) {
+-    const order = await this.repo.find(orderId);
+-    if (!order) throw new Error('not found');
+-    await this.payment.charge(order);
+-    await this.inventory.decrease(order.items);
+-    await this.mailer.sendConfirmation(order);
+-  }
++  async confirm(orderId: string) {
++    const order = await this.repo.find(orderId);
++    if (!order) throw new OrderNotFoundError(orderId);
++    await this.db.transaction(async (tx) => {
++      await this.payment.charge(order, { tx });
++      await this.inventory.decrease(order.items, { tx });
++    });
++    try {
++      await this.mailer.sendConfirmation(order);
++    } catch (e) {
++      // メール送信の失敗で注文確定を取り消さない
++      this.logger.warn('confirmation mail failed', { orderId, e });
++    }
++  }
+diff --git a/src/order/errors.ts b/src/order/errors.ts
++export class OrderNotFoundError extends Error {
++  constructor(public orderId: string) {
++    super(`order not found: ${orderId}`);
++  }
++}

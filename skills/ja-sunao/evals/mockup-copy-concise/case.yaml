@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: mockup-copy-concise
+expected_outcome: |
+  settings.html に3項目の設定画面がある。各項目の説明文は利用者が設定を決めるのに要る分だけで、画面を見れば分かることを繰り返していない。
+  説明文に「効く」系の比喩や、順序のない「まず、」がない。
