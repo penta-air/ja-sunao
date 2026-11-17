@@ -1,8 +1,0 @@
-schema_version: "1.1"
-name: write-design-doc-from-notes
-context:
-  scaffold_script: place-files.sh
-expected_outcome: |
-  design.md が作られ、メモの内容（対象は5xxとタイムアウトのみ、4xxはしない理由、最大3回、0.5s→1s→2sとジッター、12月第2週目標）が入っている。
-  トークン更新APIの扱いは未定のまま書かれ、決まったことにされていない。メモにない数値や決定事項は足されていない。
-  「**ラベル**:」型の箇条書きの連続、全角ダッシュ、定型の締めがなく、太字は多くても数か所。

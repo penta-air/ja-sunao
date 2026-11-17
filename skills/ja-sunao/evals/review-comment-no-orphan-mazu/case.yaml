@@ -1,7 +1,0 @@
-schema_version: "1.1"
-name: review-comment-no-orphan-mazu
-context:
-  scaffold_script: place-files.sh
-expected_outcome: |
-  review.md にPRの所感が書かれている。トランザクション化、メール失敗の扱い、専用エラー型といった差分の中身に触れている。
-  順序を示さない文頭の「まず、」がなく、「効く」系の比喩もない。Slackに貼る長さとして簡潔。

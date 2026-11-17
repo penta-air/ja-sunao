@@ -1,7 +1,0 @@
-schema_version: "1.1"
-name: email-delay-apology
-context:
-  scaffold_script: place-files.sh
-expected_outcome: |
-  email.txt に、メモの内容（PO-2291、12月5日から12月19日への変更、電源ICの入荷遅れと12月10日の入荷予定、100枚の分納の可否、金曜までの返事、担当佐々木）が入ったビジネスメールがある。
-  文が続いて80字を超える行や4文以上続く行がなく、話題ごとに空行で区切られている。メモにない約束や数値は足していない。
