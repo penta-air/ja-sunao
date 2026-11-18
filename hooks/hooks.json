@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/skills/ja-sunao/scripts/hook-session-start.mjs\""
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/run-node.sh\" \"${CLAUDE_PLUGIN_ROOT}/skills/ja-sunao/scripts/hook-session-start.mjs\" SessionStart"
           }
         ]
       }
@@ -16,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/skills/ja-sunao/scripts/hook-post-write.mjs\""
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/run-node.sh\" \"${CLAUDE_PLUGIN_ROOT}/skills/ja-sunao/scripts/hook-post-write.mjs\" PostToolUse"
           }
         ]
       }
@@ -27,7 +27,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/skills/ja-sunao/scripts/hook-pre-publish.mjs\""
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/run-node.sh\" \"${CLAUDE_PLUGIN_ROOT}/skills/ja-sunao/scripts/hook-pre-publish.mjs\" PreToolUse"
           }
         ]
       }
